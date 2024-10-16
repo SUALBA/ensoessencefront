@@ -1,0 +1,107 @@
+/* General */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #F4F1E5; /* Crema suave */
+    color: #0D0D0D; /* Negro profundo */
+}
+
+header {
+    display: flex;
+    justify-content: center; /* Centramos el contenido */
+    align-items: center;
+    padding: 20px;
+    background-color: #FFFFFF; /* Blanco puro */
+    flex-wrap: wrap; /* Esto permitirá que el contenido se ajuste en pantallas pequeñas */
+}
+
+header .logo img {
+    max-width: 120px; /* Ajustamos el tamaño máximo del logo */
+    height: auto;
+    margin: 0 auto; /* Centramos el logo */
+}
+
+nav {
+    flex-grow: 1; /* Esto hace que el menú crezca para ocupar espacio adicional */
+    text-align: center; /* Centramos el menú */
+}
+
+nav ul {
+    list-style: none;
+    display: inline-flex; /* Aseguramos que los elementos del menú estén en línea */
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #0D0D0D;
+    font-weight: bold;
+}
+
+section.hero {
+    text-align: center;
+    padding: 100px 20px;
+    background-color: #E0DED8; /* Gris claro */
+}
+
+section.hero h1 {
+    font-size: 2.5em;
+}
+
+section.hero p {
+    font-size: 1.2em;
+}
+
+.btn {
+    background-color: #D4AF37; /* Dorado suave */
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #FFFFFF;
+    color: #0D0D0D;
+}
+
+/* Hacer que todo sea responsive */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column; /* El logo y el menú se apilan uno sobre el otro */
+    }
+
+    nav ul {
+        flex-direction: column; /* Hacemos que el menú sea vertical en pantallas pequeñas */
+        gap: 10px;
+    }
+
+    section.hero h1 {
+        font-size: 2em;
+    }
+
+    .btn {
+        padding: 10px 15px;
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    header .logo img {
+        max-width: 100px; /* Reducimos aún más el tamaño del logo en pantallas muy pequeñas */
+    }
+
+    section.hero h1 {
+        font-size: 1.8em; /* Reducimos el tamaño del texto */
+    }
+
+ 
+}
