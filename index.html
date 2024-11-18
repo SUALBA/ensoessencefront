@@ -17,18 +17,78 @@
                 <li><a href="productos.html">Tienda</a></li>
                 <li><a href="contacto.html">Contacto</a></li>
                 <li><a href="carrito.html">Carrito</a></li>
+                <li class="miembros">
+                    <a href="Miembros.html">Exclusivo Miembros</a>
+                    <ul class="submenu">
+                        <li><a href="recompensas.html">Recompensas</a></li>
+                        <li><a href="contenido-premium.html">Contenido Premium</a></li>
+                        <li><a href="beneficios.html">Beneficios Especiales</a></li>
+                    </ul>
+                </li>
             </ul>
         </nav>
     </header>
 
+    <!-- Popup para la suscripción -->
+    <div id="popup" class="popup-overlay">
+        <div class="popup-content">
+            <button id="close-popup" class="close-btn">×</button>
+            <h2>¡Sé parte de Enso Essence!</h2>
+            <p>"Únete a Enso Essence y descubre el arte de vivir en equilibrio. Como miembro de nuestra comunidad, serás parte de un círculo exclusivo que transforma pequeños momentos en grandes experiencias de paz. ¡Haz que cada día sea especial!"</p>
+            <form id="newsletter-form">
+                <input type="text" name="name" placeholder="Tu nombre completo" required>
+                <input type="email" name="email" placeholder="Tu correo electrónico" required>
+                <input type="tel" name="phone" placeholder="Tu número de teléfono" required>
+                <label for="birthdate">Fecha de nacimiento:</label>
+                <input type="date" id="birthdate" name="birthdate" required>
+              <div class="privacy-policy">
+                <input type="checkbox" id="privacy-policy" name="privacy" required>
+                <label for="privacy-policy">Acepto la <a href="politica-privacidad.html" target="_blank">Política de Privacidad</a></label>
+             </div>
+                <button type="submit" class="btn">Suscribirme y obtener mi cupón</button>
+                <p>Suscríbete ahora y recibe un <strong>cupón EXCLUSIVO</strong> con un 10% de descuento en tu primer pedido. Descubre cómo vivir más Zen.</p>
+            
+            </form>
+        </div>
+    </div>
+
     <section class="hero">
+        <img src="img/zen-gift.jpg" alt="Zen Gift Set" class="hero-image">
         <h1>Regala paz, recibe paz</h1>
         <p>Descubre nuestros sets de productos zen y exclusivos.</p>
+        <p>Los detalles perfectos para regalar tranquilidad y equilibrio a tus seres queridos.</p>
         <a href="productos.html" class="btn">Ver Productos</a>
     </section>
 
     <footer>
         <p>© 2024 Enso Essence. Todos los derechos reservados.</p>
     </footer>
+
+    <script>
+        // Mostrar el popup al cargar la página
+        window.onload = function() {
+            setTimeout(() => {
+                const popup = document.getElementById('popup');
+                popup.style.display = 'flex';
+            }, 2000); // Aparece 2 segundos después de cargar
+        };
+
+        // Cerrar el popup
+        document.getElementById('close-popup').onclick = function() {
+            const popup = document.getElementById('popup');
+            popup.style.display = 'none';
+        };
+
+        // Procesar el formulario
+        document.getElementById('newsletter-form').onsubmit = function(event) {
+            event.preventDefault();
+            if (document.getElementById('privacy-policy').checked) {
+                alert('¡Gracias por suscribirte! Recibirás tu cupón en breve.');
+                document.getElementById('popup').style.display = 'none';
+            } else {
+                alert('Por favor, acepta nuestra Política de Privacidad.');
+            }
+        };
+    </script>
 </body>
 </html>
