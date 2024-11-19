@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle del Producto - Momento de Paz</title>
+    <link rel="stylesheet" href="css/detalle-producto.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="img/logo.jpg.webp" alt="Logo Enso Essence">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="productos.html">Tienda</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="detalle-producto">
+        <section class="banner-producto">
+            <img src="img/momento_paz.jpg" alt="Momento de Paz">
+            <div class="info-principal">
+                <h1>Momento de Paz</h1>
+                <p class="descripcion-corta">
+                    Descubre el equilibrio perfecto con nuestro pack "Momento de Paz". Diseñado para inspirar calma y serenidad, este set combina lo esencial para transformar cualquier espacio en un refugio zen.
+                </p>
+                <p class="precio-total">
+                    <strong>Precio:</strong> 69,95 € <span class="envio">(envío: +3,95 €)</span>
+                </p>
+                <a href="carrito.html" class="btn-comprar" onclick="agregarAlCarrito(event)">Añadir al Carrito</a>
+
+            </div>
+        </section>
+
+        <section class="detalles-pack">
+            <h2>¿Qué incluye este pack?</h2>
+            <ul class="lista-componentes">
+                <li>
+                    <img src="img/velaelegante1.jpg" alt="Vela aromática">
+                    <div class="info-componente">
+                        <h3>Vela Aromática: Luz y Serenidad en Cada Momento</h3>
+                        <p>Transforma tu espacio con esta exquisita vela aromática. Su elegante vaso en tono beige, adornado con un logotipo dorado en forma de flor de loto, simboliza pureza y tranquilidad. 
+                            Encenderla es iniciar un momento de paz: su cálida luz y aroma crean un ambiente perfecto para la meditación, la relajación o simplemente disfrutar de tu momento Zen. Los 100 primeros pedidos reciben de regalo en el pack una minivela extra.</p>
+                    </div>
+                </li>
+                <li>
+                    <img src="img/amuletoespejo.webp" alt="Amuleto dorado">
+                    <div class="info-componente">
+                        <h3>Amuleto Dorado con Espejo Interior.
+                        </h3>
+                        <p>Este amuleto, de forma circular y exquisitamente diseñado en dorado, incorpora los valores del Zen en cada uno de sus detalles. Su delicado grabado en forma de flor de loto simboliza el florecimiento espiritual, la pureza y la superación de las adversidades. En su interior, un espejo cuidadosamente pulido refleja no solo el mundo exterior, sino también el camino hacia la introspección y el autoconocimiento. </p>
+                    </div>
+                </li>
+                <li>
+                    <img src="img/cuarzoRosado.webp" alt="Piedra energética">
+                    <div class="info-componente">
+                        <h3>Piedra energetica alargada</h3>
+                        <p>Cuarzo rosado natural con acabados pulidos.El cuarzo rosado, es un símbolo de amor, paz y equilibrio emocional. Su forma estilizada permite que fluya la energía de manera natural, siendo ideal para meditación, rituales de autocuidado o como un elegante elemento decorativo en tu espacio Zen.
+                    </p>
+                    </div>
+                </li>
+                <li>
+                    <img src="img/pulseracalma.webp" alt="Pulsera personalizada">
+                    <div class="info-componente">
+                        <h3>Pulsera Dorada con Piedra Rosada: Elegancia y Energía en Armonía</h3>
+                        <p>Un accesorio que inspira: La combinación del dorado con el tono suave de la piedra central simboliza la unión perfecta entre la energía positiva y la elegancia cotidiana. Ideal para complementar cualquier atuendo, esta pulsera también actúa como un recordatorio constante de calma y conexión interior.</p>
+                    </div>
+                </li>
+                <li>
+                    <img src="img/cajacalma.webp" alt="Tarjeta personalizada">
+                    <div class="info-componente">
+                        <h3>Caja de Aceites Esenciales: Elixir de Calma</h3>
+                        <p>Un detalle único que refleja gratitud y serenidad. En su elegante diseño, esta caja contiene una delicada botella de aceites esenciales, cuidadosamente seleccionados para enriquecer tus momentos de paz.
+
+                            Un ritual de cuidado personal: Cada gota del aceite esencial es una invitación a reconectar contigo mismo, transformando tu espacio en un refugio de tranquilidad.</p>
+                    </div>
+                </li>
+            </ul>
+        </section>
+    </main>
+
+    
+
+    <footer>
+        <div class="logo">
+            <img src="img/logo.jpg.webp" alt="Logo Enso Essence" class="logo-footer">
+        </div>
+        <p class="frase-footer">Regala paz, recibe paz</p>
+        <p>Enso Essence © 2024 - Todos los derechos reservados.</p>
+    </footer>
+    
+    <style>
+        .logo-footer {
+            max-width: 150px; /* Ajusta el tamaño máximo de ancho */
+            height: auto;    /* Mantiene la proporción de la imagen */
+            display: block;  /* Asegura que la imagen se comporte como un bloque */
+            margin: 0 auto;  /* Centra la imagen dentro del div */
+        }
+    
+        footer {
+            text-align: center; /* Alinea todo el contenido del footer al centro */
+            padding: 20px;      /* Agrega espacio alrededor del contenido */
+            background-color: #f7f7f7; /* Fondo suave para el footer */
+        }
+    
+        .frase-footer {
+            font-style: italic; /* Da un estilo elegante a la frase */
+            margin: 10px 0;
+        }
+    </style>
+
+<script>
+    function agregarAlCarrito(event) {
+        // Prevenir la redirección inmediata
+        event.preventDefault();
+
+        // Definir el producto
+        const producto = {
+            nombre: "Momento de Paz",
+            precio: 69.95,
+            envio: 3.95
+        };
+
+        // Obtener el carrito actual o inicializar uno nuevo
+        const carrito = JSON.parse(localStorage.getItem('cart')) || [];
+
+        // Agregar el producto al carrito
+        carrito.push(producto);
+        localStorage.setItem('cart', JSON.stringify(carrito));
+
+        // Redirigir a la página del carrito
+        window.location.href = "carrito.html";
+    }
+</script>
+
+    
+</body>
+</html>

@@ -25,10 +25,18 @@ header {
 }
 
 header .logo img {
-    max-width: 120px; /* Ajustamos el tamaño máximo del logo */
-    height: auto;
-    margin: 0 auto; /* Centramos el logo */
+    max-width: 180px; /* Incrementa el tamaño máximo del logo */
+    height: auto; /* Mantiene las proporciones */
+    margin: 0 auto; /* Centra el logo */
+    padding: 10px; /* Añade espacio alrededor del logo */
+    transition: transform 0.3s ease; /* Efecto visual al interactuar */
 }
+
+/* Efecto hover para el logo */
+header .logo img:hover {
+    transform: scale(1.1); /* Aumenta ligeramente el tamaño al pasar el ratón */
+}
+
 
 nav {
     flex-grow: 1; /* Esto hace que el menú crezca para ocupar espacio adicional */
@@ -72,6 +80,15 @@ section.hero p {
     font-weight: bold;
     display: inline-block;
     margin-top: 20px;
+}
+
+
+footer .logo img {
+    max-width: 180px; /* Incrementa el tamaño máximo del logo */
+    height: auto; /* Mantiene las proporciones */
+    margin: 0 auto; /* Centra el logo */
+    padding: 10px; /* Añade espacio alrededor del logo */
+    transition: transform 0.3s ease; /* Efecto visual al interactuar */
 }
 
 footer {
@@ -287,4 +304,311 @@ footer {
 /* Mostrar el menú al pasar el mouse */
 .miembros:hover .submenu {
     display: block;
+}
+-----------------------------------------
+
+/* Sección de Contacto */
+.contacto {
+    max-width: 800px;
+    margin: 50px auto;
+    text-align: center;
+    padding: 20px;
+    background: #F4F1E5; /* Fondo crema */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contacto h1 {
+    font-size: 2.2em;
+    color: #0D0D0D;
+    margin-bottom: 10px;
+}
+
+.contacto p {
+    font-size: 1.2em;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.contacto form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    text-align: left;
+}
+
+.contacto label {
+    font-size: 1em;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.contacto input,
+.contacto select,
+.contacto textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.contacto input:focus,
+.contacto select:focus,
+.contacto textarea:focus {
+    border-color: #D4AF37;
+    outline: none;
+}
+
+.contacto textarea {
+    resize: none;
+    height: 100px;
+}
+
+.contacto .btn {
+    background-color: #D4AF37;
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contacto .btn:hover {
+    background-color: #B3892C;
+}
+
+.privacy-policy {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.9em;
+    color: #555;
+}
+
+.privacy-policy a {
+    color: #D4AF37;
+    text-decoration: underline;
+}
+
+.privacy-policy input {
+    margin: 0;
+}
+-------------
+/* Margen general para pantallas grandes */
+.contacto {
+    max-width: 800px; /* Controla el ancho máximo de la sección */
+    margin: 50px auto; /* Centra la sección en la página */
+    padding: 40px; /* Espacio interno adicional */
+    background: #F4F1E5; /* Fondo crema */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Ajuste del margen y espaciado en pantallas grandes */
+@media (min-width: 1200px) {
+    .contacto {
+        padding: 60px; /* Más espacio interno en pantallas grandes */
+        margin: 100px auto; /* Más espacio superior e inferior */
+    }
+}
+
+/*----------------------------css productos-------------------------- */
+
+/* General */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+/* Sección de productos */
+.productos {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #ffffff;
+}
+
+.productos h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #333333;
+}
+
+.contenedor-productos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.producto {
+    background-color: #fafafa;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    text-align: left;
+}
+
+.producto img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.producto h2 {
+    font-size: 1.5em;
+    margin: 15px 0;
+    color: #555555;
+}
+
+.producto p {
+    font-size: 1em;
+    color: #666666;
+    margin-bottom: 10px;
+}
+
+.producto .btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.producto .btn:hover {
+    background-color: #0056b3;
+}
+
+.producto:hover {
+    transform: translateY(-5px);
+}
+
+
+/*-----------------*/
+/* Estilo de la sección de personalización */
+.personalizacion {
+    grid-column: span 2; /* Ocupará el ancho de dos columnas en pantallas grandes */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 20px;
+    padding: 30px;
+    background-color: #f8f8f8;
+    border: 1px solid #dedede;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.personalizacion img {
+    max-width: 40%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.personalizacion h2 {
+    font-size: 1.8em;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.personalizacion p {
+    font-size: 1.1em;
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+.personalizacion strong {
+    color: #222;
+}
+
+.personalizacion a {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.personalizacion a:hover {
+    background-color: #0056b3;
+}
+/*  call to action  ---*/
+
+.cta-botones {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.cta {
+    display: inline-block;
+    padding: 12px 20px;
+    font-size: 1em;
+    color: #ffffff;
+    background-color: #007BFF;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-align: center;
+}
+
+.cta:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+.cta:active {
+    transform: scale(0.95);
+}
+
+
+/*----*/
+.frase-modelo {
+    font-size: 1.5em;
+    font-style: italic;
+    color: #007BFF; /* Un color destacado que se alinee con tu paleta de colores */
+    text-align: center;
+    margin: 10px 0 20px;
+    font-weight: 500;
+}
+/*-------------banner */
+.banner-tienda {
+    background-image: url('/img/esencial_navidad.jpg'); /* Cambia por la ruta de tu imagen */
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
+    text-align: center;
+    padding: 50px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.banner-tienda h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.banner-tienda p {
+    font-size: 1.2em;
+    font-weight: 400;
+    margin-top: 0;
 }
